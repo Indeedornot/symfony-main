@@ -1,0 +1,21 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Listen for Xdebug",
+            "type": "php",
+            "request": "launch",
+            "pathMappings": {
+              "/app": "${workspaceFolder}"
+            },
+            "stopOnEntry": true,
+            "dbgpProxy": {
+              "enable": true,
+              "port": 9100,
+              "host": "localhost",
+              "timeout": 6000,
+              "ideKey": "indeed"
+            }
+        }
+    ]
+}
