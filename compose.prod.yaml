@@ -6,3 +6,8 @@ services:
       target: frankenphp_prod
     environment:
       APP_SECRET: ${APP_SECRET}
+    env_file:
+      - .env
+      - .env.prod
+    deploy:
+      replicas: 2

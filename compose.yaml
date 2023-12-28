@@ -30,23 +30,6 @@ services:
       - target: 443
         published: ${HTTP3_PORT:-443}
         protocol: udp
-    depends_on:
-      - dbgpproxy
-    pull_policy: always
-  dbgpproxy:
-    container_name: dbgpproxy
-    restart: always
-    build:
-      context: ./config/dbgpProxy
-      dockerfile: Dockerfile
-    environment:
-      DBGP_PROXY_PORT: 9001
-      XDEBUG_CLIENT_PORT: 9003
-    ports:
-      - target: 9001
-        published: 9100
-        protocol: tcp
-    pull_policy: always
 
 # Mercure is installed as a Caddy module, prevent the Flex recipe from installing another service
 ###> symfony/mercure-bundle ###

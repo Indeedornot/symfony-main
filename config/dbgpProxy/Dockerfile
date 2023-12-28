@@ -3,6 +3,10 @@ FROM debian
 RUN apt-get update
 RUN apt-get -y install wget
 
+ARG APP_ENV
+# IF APP_ENV=prod THEN do not run
+RUN if [ "$APP_DEBUG" = "0" ] ; then exit 1 ; fi
+
 RUN wget -O /var/dbgpProxy https://xdebug.org/files/binaries/dbgpProxy
 RUN chmod 0777 /var/dbgpProxy
 RUN chmod +x /var/dbgpProxy
