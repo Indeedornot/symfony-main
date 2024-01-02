@@ -1,3 +1,0 @@
-services:
-  php:
-    image: my-registry/php:latest

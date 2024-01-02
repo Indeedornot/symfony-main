@@ -57,7 +57,8 @@
             "@auto-scripts"
         ],
         "docker:run:dev": "php ./scripts/docker-run-dev.php",
-        "docker:run:prod": "php ./scripts/docker-run-prod.php"
+        "docker:run:prod": "php ./scripts/docker-run-prod.php",
+        "docker:deploy": "php ./scripts/docker-deploy.php"
     },
     "conflict": {
         "symfony/symfony": "*"
