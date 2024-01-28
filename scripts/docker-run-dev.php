@@ -1,4 +1,6 @@
 <?php
+require_once __DIR__ . '/helpers.php';
+
 // run-docker-dev.php
 putenv('APP_ENV=dev');
 putenv('APP_DEBUG=1');

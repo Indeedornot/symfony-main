@@ -11,9 +11,8 @@ class WelcomeController extends AbstractController
     #[Route('/welcome', name: 'app_welcome')]
     public function index(): JsonResponse
     {
-        echo 123;
         return $this->json([
-            'message' => 'Welcome to your new controller!',
+            'message' => 'Welcome to your new controller! v1.0.1',
         ]);
     }
 

@@ -58,7 +58,9 @@
         ],
         "docker:run:dev": "php ./scripts/docker-run-dev.php",
         "docker:run:prod": "php ./scripts/docker-run-prod.php",
-        "docker:deploy": "php ./scripts/docker-deploy.php"
+        "docker:deploy": "php ./scripts/docker-deploy.php",
+        "docker:create:registry": "php ./scripts/docker-create-registry.php",
+        "benchmark": "php ./scripts/benchmark.php"
     },
     "conflict": {
         "symfony/symfony": "*"

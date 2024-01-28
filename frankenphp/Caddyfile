@@ -4,12 +4,14 @@
 		{$FRANKENPHP_CONFIG}
 	}
 
+	auto_https off
+
 	# https://caddyserver.com/docs/caddyfile/directives#sorting-algorithm
 	order vulcain after reverse_proxy
 	order php_server before file_server
+{$CADDY_EXTRA_CONFIG}
 }
 
-{$CADDY_EXTRA_CONFIG}
 
 {$SERVER_NAME:localhost} {
 	root * /app/public
